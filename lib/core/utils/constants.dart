@@ -1,6 +1,11 @@
+import 'dart:io';
+
 class AppConstants {
   // API Configuration
-  static const String apiBaseUrl = 'http://localhost:3000';
+  static final String apiBaseUrl = Platform.isIOS
+      ? 'http://localhost:3000'
+      : 'http://10.0.2.2:3000';
+      
   static const String workoutEndpoint = '/workouts';
   static const String exercisesEndpoint = '/workouts/exercises';
 
