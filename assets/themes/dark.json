@@ -1,0 +1,54 @@
+{
+  "colors": {
+    "primary": "#007AFF",
+    "onPrimary": "#FFFFFF",
+    "secondary": "#FF9500",
+    "onSecondary": "#FFFFFF",
+    "surface": "#1C1C1E",
+    "onSurface": "#FFFFFF",
+    "background": "#000000",
+    "onBackground": "#FFFFFF",
+    "error": "#990D35",
+    "onError": "#000000",
+    "accent": "#FFD60A",
+    "exerciseSelected": "#FFD60A",
+    "exerciseCompleted": "#30D158",
+    "equipmentBadge": "#8E8E93",
+    "hintColor": "#FFEEF3",
+    "borderColor": "#FFE74C"
+    
+  },
+  "textStyles": {
+    "headlineLarge": {
+      "fontSize": 24.0,
+      "fontWeight": 6,
+      "color": "#FFFFFF"
+    },
+    "headlineMedium": {
+      "fontSize": 20.0,
+      "fontWeight": 6,
+      "color": "#FFFFFF"
+    },
+    "headlineSmall": {
+        "fontSize": 18.0,
+        "fontWeight": 6,
+        "color": "#FFFFFF"
+        },
+    "bodyLarge": {
+      "fontSize": 16.0,
+      "fontWeight": 4,
+      "color": "#FFFFFF"
+    },
+    "bodyMedium": {
+      "fontSize": 14.0,
+      "fontWeight": 4,
+      "color": "#8E8E93"
+    },
+    "bodySmall": {
+      "fontSize": 12.0,
+      "fontWeight": 4,
+      "color": "#8E8E93"
+    }
+
+  }
+}
