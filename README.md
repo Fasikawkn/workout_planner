@@ -82,7 +82,7 @@ The app follows clean architecture principles with:
 
 2. **JSON Server not running**: Make sure the server is running on port 3000 before launching the app
 
-3. **Network errors**: Ensure your device/emulator can access `http://localhost:3000` for iOS Simulator and `http://10.0.2.2:3000` for android emulator
+3. **Network errors**: Ensure your device/emulator can access `http://localhost:3000` for iOS simulator and `http://10.0.2.2:3000` for android emulator
 
 4. **iOS build issues**: Run `cd ios && pod install` to update CocoaPods dependencies
 
