@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../core/utils/constants.dart';
+import '../../../core/widgets/app_button.dart';
 
 class ExerciseActionButton extends StatelessWidget {
   final String icon;
@@ -17,21 +17,13 @@ class ExerciseActionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-    return Expanded(
-      flex: flex,
-      child: OutlinedButton.icon(
+    return SizedBox(
+      height: 32,
+      child: AppButton.outlined(
+        radius: 40,
+        text: label,
         onPressed: onPressed,
-        style: OutlinedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(
-            horizontal: AppConstants.spacingM,
-          ),
-          side: BorderSide(color: theme.colorScheme.onSurface),
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(40),
-          ),
-        ),
+        foregroundColor: Theme.of(context).colorScheme.onSurface,
         icon: Image.asset(
           width: 16,
           height: 16,
@@ -40,15 +32,11 @@ class ExerciseActionButton extends StatelessWidget {
             return Icon(
               Icons.fitness_center,
               size: 16,
-              color: theme.colorScheme.onSurface.withValues(alpha: 0.7),
+              color: Theme.of(
+                context,
+              ).colorScheme.onSurface.withValues(alpha: 0.7),
             );
           },
-        ),
-        label: Text(
-          label,
-          style: theme.textTheme.bodyMedium?.copyWith(
-            color: theme.colorScheme.onSurface,
-          ),
         ),
       ),
     );

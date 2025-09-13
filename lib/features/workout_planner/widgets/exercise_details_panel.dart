@@ -79,9 +79,9 @@ class ExerciseDetailsPanel extends StatelessWidget {
 
           // Action buttons
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               ExerciseActionButton(
-                flex: 4,
                 icon: 'assets/icons/instructions.png',
                 label: 'Instructions',
                 onPressed: () {},
@@ -90,7 +90,6 @@ class ExerciseDetailsPanel extends StatelessWidget {
               const SizedBox(width: AppConstants.spacingS),
 
               ExerciseActionButton(
-                flex: 3,
                 icon: 'assets/icons/warmup.png',
                 label: 'Warm Up',
                 onPressed: () {},
@@ -99,7 +98,6 @@ class ExerciseDetailsPanel extends StatelessWidget {
               const SizedBox(width: AppConstants.spacingS),
 
               ExerciseActionButton(
-                flex: 2,
                 icon: 'assets/icons/faq.png',
                 label: 'FAQ',
                 onPressed: () {},

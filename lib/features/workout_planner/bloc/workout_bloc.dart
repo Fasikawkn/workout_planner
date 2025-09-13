@@ -188,14 +188,41 @@ class WorkoutBloc extends Bloc<WorkoutEvent, WorkoutState> {
     }
   }
 
-  void _onAddExercise(AddExercise event, Emitter<WorkoutState> emit) {
-    if (!state.isEditMode) return;
+  Future<void> _onAddExercise(
+    AddExercise event,
+    Emitter<WorkoutState> emit,
+  ) async {
+    // if (!state.isEditMode) return;
 
-    final exercises = List<Exercise>.from(state.exercises);
-    final newExercise = event.exercise.copyWith(order: exercises.length);
-    exercises.add(newExercise);
+    try {
+      emit(state.copyWith(status: WorkoutStatus.loading));
 
-    emit(state.copyWith(exercises: exercises, hasUnsavedChanges: true));
+      final exercises = List<Exercise>.from(state.exercises);
+      final newExercise = event.exercise.copyWith(order: exercises.length);
+
+      // Create exercise in repository (persists to JSON)
+      await _workoutRepository.createExercise(newExercise);
+
+      exercises.add(newExercise);
+
+      // Find the index of the newly added exercise (should be the last one)
+      final newExerciseIndex = exercises.length - 1;
+
+      emit(
+        state.copyWith(
+          status: WorkoutStatus.loaded,
+          exercises: exercises,
+          selectedExerciseIndex:
+              newExerciseIndex, // Auto-select the newly added exercise
+          hasUnsavedChanges: true,
+          errorMessage: null,
+        ),
+      );
+    } catch (e) {
+      emit(
+        state.copyWith(status: WorkoutStatus.error, errorMessage: e.toString()),
+      );
+    }
   }
 
   int _findCurrentExerciseIndex(List<Exercise> exercises) {

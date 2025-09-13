@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../../core/utils/constants.dart';
+import '../../../core/widgets/app_button.dart';
 
 class EditModeControls extends StatelessWidget {
   final bool canSaveChanges;
@@ -34,22 +35,11 @@ class EditModeControls extends StatelessWidget {
         children: [
           // Discard button
           Expanded(
-            child: ElevatedButton(
+            child: AppButton.elevated(
+              radius: 40,
+              text: 'Discard',
               onPressed: onDiscardChanges,
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  vertical: AppConstants.spacingL,
-                ),
-                backgroundColor: theme.scaffoldBackgroundColor,
-                elevation: 0,
-              ),
-              child: Text(
-                'Discard',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onSurface,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
+              backgroundColor: theme.scaffoldBackgroundColor,
             ),
           ),
 
@@ -57,25 +47,10 @@ class EditModeControls extends StatelessWidget {
 
           // Save Changes button
           Expanded(
-            child: ElevatedButton(
+            child: AppButton.elevated(
+              radius: 40,
+              text: 'Save Changes',
               onPressed: canSaveChanges ? onSaveChanges : null,
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.symmetric(
-                  vertical: AppConstants.spacingL,
-                ),
-                backgroundColor: theme.colorScheme.surfaceContainer,
-                foregroundColor: Colors.black,
-                disabledBackgroundColor: theme.colorScheme.surfaceContainer
-                    .withValues(alpha: 0.5),
-                elevation: 0,
-              ),
-              child: Text(
-                'Save Changes',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: theme.colorScheme.onSurface,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
             ),
           ),
         ],

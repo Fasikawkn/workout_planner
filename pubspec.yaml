@@ -53,6 +53,7 @@ dependencies:
   # UI Components
   cupertino_icons: ^1.0.8
   reorderable_grid_view: ^2.2.7
+  image_picker: ^1.2.0
   
   # Fonts
   google_fonts: ^6.1.0
@@ -79,7 +80,6 @@ flutter:
   # Assets
   assets:
     - assets/themes/
-    - assets/data/
     - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see

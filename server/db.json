@@ -3,7 +3,6 @@
     "workout_name": "Chris' Full Body 1",
     "exercises": [
       {
-        "id": "1",
         "name": "Squat",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/143513.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/143513.gif",
@@ -12,7 +11,6 @@
         "order": 0
       },
       {
-        "id": "2",
         "name": "Inclined Bench Press",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/031413.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/031413.gif",
@@ -21,7 +19,6 @@
         "order": 1
       },
       {
-        "id": "3",
         "name": "Pull Ups",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/142913.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/142913.gif",
@@ -30,7 +27,6 @@
         "order": 2
       },
       {
-        "id": "4",
         "name": "Shoulder Press",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/040513.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/040513.gif",
@@ -39,7 +35,6 @@
         "order": 3
       },
       {
-        "id": "5",
         "name": "Curl Biceps",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/016513.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/031413.gif",
@@ -48,15 +43,29 @@
         "order": 4
       },
       {
-        "id": "6",
         "name": "Extension Triceps",
         "asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/020013.png",
         "gif_asset_url": "https://jyfpzydnxyelsxofxcnz.supabase.co/storage/v1/object/public/exercise_gifs/1080/020013.gif",
         "equipment": "cable",
         "status": "not_started",
         "order": 5
+      },
+      {
+        "name": "Hands Triceps",
+        "asset_url": "/Users/fasikaw/Library/Developer/CoreSimulator/Devices/C29D7ADF-0369-4E08-BD34-5D989DE4A517/data/Containers/Data/Application/D8FFD8A4-745E-43A3-A48F-391047076DB8/tmp/image_picker_7077060A-44E3-4F9A-88DE-A6BE70C24DE5-59889-000000C822734A6D.png",
+        "gif_asset_url": "/Users/fasikaw/Library/Developer/CoreSimulator/Devices/C29D7ADF-0369-4E08-BD34-5D989DE4A517/data/Containers/Data/Application/D8FFD8A4-745E-43A3-A48F-391047076DB8/tmp/image_picker_24CD4DD0-5154-455C-BE98-835E12437A38-59889-000000C8259CEBB7.gif",
+        "equipment": "barbell",
+        "status": "not_started",
+        "order": 6
+      },
+      {
+        "name": "Triceps",
+        "asset_url": "/Users/fasikaw/Library/Developer/CoreSimulator/Devices/C29D7ADF-0369-4E08-BD34-5D989DE4A517/data/Containers/Data/Application/D8FFD8A4-745E-43A3-A48F-391047076DB8/tmp/image_picker_13CF63BE-A62E-4D0A-BE06-826152335E4A-59889-000000CA4726D844.png",
+        "gif_asset_url": "/Users/fasikaw/Library/Developer/CoreSimulator/Devices/C29D7ADF-0369-4E08-BD34-5D989DE4A517/data/Containers/Data/Application/D8FFD8A4-745E-43A3-A48F-391047076DB8/tmp/image_picker_F1B1FC68-250D-4AC2-9C47-F61806A6A808-59889-000000CA4A7AA2DF.gif",
+        "equipment": "barbell",
+        "status": "not_started",
+        "order": 4
       }
-      
     ]
   }
 }

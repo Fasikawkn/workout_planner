@@ -1,3 +1,6 @@
+import 'dart:io';
+
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import '../models/exercise.dart';
 import '../../../core/utils/constants.dart';
@@ -57,19 +60,25 @@ class ExerciseCircleItem extends StatelessWidget {
                   ),
                 ),
                 child: ClipOval(
-                  child: Image.network(
-                    exercise.assetUrl,
+                  child: CachedNetworkImage(
+                    imageUrl: exercise.assetUrl,
                     fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) {
-                      return Container(
-                        color: theme.colorScheme.surface,
-                        child: Icon(
-                          Icons.fitness_center,
-                          color: theme.colorScheme.onSurface.withValues(
-                            alpha: 0.5,
-                          ),
-                          size: 32,
-                        ),
+                    errorWidget: (context, error, stackTrace) {
+                      return Image.file(
+                        File(exercise.assetUrl),
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return Container(
+                            color: theme.colorScheme.surface,
+                            child: Icon(
+                              Icons.fitness_center,
+                              color: theme.colorScheme.onSurface.withValues(
+                                alpha: 0.5,
+                              ),
+                              size: 32,
+                            ),
+                          );
+                        },
                       );
                     },
                   ),
@@ -77,7 +86,9 @@ class ExerciseCircleItem extends StatelessWidget {
               ),
             ),
             // Status overlay
-            if (exercise.isCompleted || exercise.isInProgress || isSelected)
+            if (!isEditMode && exercise.isCompleted ||
+                exercise.isInProgress ||
+                isSelected)
               Positioned(
                 right: 0,
                 bottom: 6,

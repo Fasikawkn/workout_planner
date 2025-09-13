@@ -133,14 +133,15 @@ class WorkoutRepositoryImpl implements WorkoutRepository {
         exercises: updatedExercises,
         updatedAt: DateTime.now(),
       );
+      final body = {
+        'workout_name': updatedWorkout.workoutName,
+        'exercises': updatedExercises.map((e) => e.toJson()).toList(),
+      };
 
       // Update the entire workout with the new exercise
       await _apiClient.put(
         '${AppConstants.apiBaseUrl}${AppConstants.workoutEndpoint}',
-        body: {
-          'workout_name': updatedWorkout.workoutName,
-          'exercises': updatedExercises.map((e) => e.toJson()).toList(),
-        },
+        body: body,
       );
 
       // Save updated workout to local storage
