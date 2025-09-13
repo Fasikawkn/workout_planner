@@ -13,6 +13,10 @@ Workout Planner is a simple yet powerful fitness app that allows you to:
 
 The app supports various equipment types including barbells, dumbbells, cables, and bodyweight exercises.
 
+## Video Demo
+[Watch the setup and run guide here](https://www.loom.com/share/9da62b2fb3fb41f1b41ec74514566bb6?sid=0817c0ba-a9d3-40aa-a585-4ebdaea868ed)
+
+
 ## Requirements
 
 - Flutter SDK (>=3.8.0)
